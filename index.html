@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Jaden's Auto & Detailing. Automotive service, repair and detailing.">
+  <meta name="theme-color" content="#080808">
+  <title>Jaden's Auto &amp; Detailing</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <style>
+    :root{--bg:#080808;--panel:#111;--text:#f5f5f5;--muted:#b8b8b8;--line:#292929;--red:#ed1c24;--max:1400px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+    header{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100vw - var(--max))/2));border-bottom:1px solid #242424;background:rgba(8,8,8,.97);position:sticky;top:0;z-index:20}
+    .header-logo{width:300px;max-height:62px;object-fit:contain;object-position:left center}nav{display:flex;gap:32px;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}nav a{padding:27px 0 23px;border-bottom:2px solid transparent}nav a:hover{color:var(--red);border-color:var(--red)}
+    .hero{min-height:500px;display:grid;place-items:center;text-align:center;padding:72px 24px 60px;background:radial-gradient(circle at 50% 25%,#331014 0,#111 30%,#080808 68%);border-bottom:1px solid #232323;position:relative;overflow:hidden}
+    .hero:before,.hero:after{content:"";position:absolute;width:430px;height:2px;background:linear-gradient(90deg,transparent,var(--red),transparent);opacity:.4}.hero:before{top:22%;left:-80px;transform:rotate(-8deg)}.hero:after{right:-90px;bottom:25%;transform:rotate(8deg)}
+    .hero-inner{position:relative;z-index:1;width:min(1080px,94vw)}.hero-logo{width:min(1000px,94vw);margin:0 auto 22px}.kicker{font-size:.82rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:#d7d7d7}.kicker b{color:var(--red)}.hero p.copy{max-width:700px;margin:20px auto 0;color:#c7c7c7;font-size:1.05rem}
+    .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;min-width:160px;padding:13px 20px;border:1px solid #aaa;border-radius:5px;font-size:.78rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.btn.primary{background:var(--red);border-color:var(--red)}.btn:hover{filter:brightness(1.12)}
+    section{max-width:var(--max);margin:auto;padding:42px 28px}h2{margin:0;text-transform:uppercase;font-size:2rem;letter-spacing:.03em}.rule{width:52px;height:2px;background:var(--red);margin:12px 0 26px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:6px;padding:24px;background:linear-gradient(145deg,#151515,#0d0d0d);min-height:150px}.num{color:var(--red);font-size:.75rem;font-weight:900;letter-spacing:.12em}.card h3{margin:10px 0 8px;text-transform:uppercase;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.9rem}
+    .work-section{padding-top:18px}.work-head{display:flex;justify-content:space-between;align-items:end;gap:20px}.work-head a{color:var(--red);font-size:.74rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.work-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.work{height:150px;border:1px solid #333;border-radius:5px;padding:18px;display:flex;align-items:end;background:linear-gradient(145deg,#252525,#0d0d0d 70%,#2b0c0f);position:relative;overflow:hidden}.work:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 0 45%,rgba(237,28,36,.12) 46% 48%,transparent 49%)}.work span{position:relative;z-index:1;text-transform:uppercase;font-size:.67rem;font-weight:900;letter-spacing:.06em}
+    .about-wrap{max-width:none;padding:0;display:grid;grid-template-columns:1.15fr .85fr;border-top:1px solid #292929}.about,.quote{padding:46px max(28px,calc((100vw - var(--max))/2))}.about{padding-right:7vw;background:#101010}.about p{max-width:720px;color:#c9c9c9}.quote{padding-left:52px;background:linear-gradient(120deg,#850a10,#2d0709 72%,#100909)}.quote .rule{background:#fff;opacity:.65}.quote p{max-width:540px}.note{font-size:.72rem;color:#d4a9ab;margin-top:18px}
+    footer{max-width:var(--max);margin:auto;padding:26px 28px;display:flex;justify-content:space-between;gap:20px;color:#777;font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+    @media(max-width:950px){nav{gap:18px}.services{grid-template-columns:repeat(2,1fr)}.work-grid{grid-template-columns:repeat(3,1fr)}.about-wrap{grid-template-columns:1fr}.about,.quote{padding:42px 7vw}}
+    @media(max-width:680px){header{height:64px}.header-logo{width:205px}nav a:not(:last-child){display:none}.hero{min-height:430px;padding-top:55px}.kicker{font-size:.66rem;letter-spacing:.18em}.services{grid-template-columns:1fr}.work-grid{grid-template-columns:repeat(2,1fr)}.work-head{align-items:flex-start;flex-direction:column}footer{flex-direction:column}}
+  </style>
+</head>
+<body>
+<header>
+  <a href="#top" aria-label="Jaden's Auto and Detailing home"><img class="header-logo" src="assets/logo.svg" alt="Jaden's Auto and Detailing"></a>
+  <nav><a href="#services">Services</a><a href="#work">Recent Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+<main id="top">
+  <section class="hero"><div class="hero-inner"><img class="hero-logo" src="assets/logo.svg" alt="Jaden's Auto and Detailing"><div class="kicker">AUTO SERVICE <b>•</b> REPAIR <b>•</b> DETAILING</div><p class="copy">Straightforward automotive service and detailing, from regular maintenance to hands-on mechanical work.</p><div class="actions"><a class="btn primary" href="#contact">Get a Quote</a><a class="btn" href="#work">See Recent Work</a></div></div></section>
+  <section id="services"><h2>Services</h2><div class="rule"></div><div class="services">
+    <article class="card"><div class="num">01</div><h3>Tune-Ups</h3><p>Routine tune-ups and maintenance to help keep your vehicle running smoothly.</p></article>
+    <article class="card"><div class="num">02</div><h3>General Inspections</h3><p>General vehicle checks to look over common wear items and identify potential issues.</p></article>
+    <article class="card"><div class="num">03</div><h3>Fluid Top-Ups</h3><p>Checking and topping up common vehicle fluids as needed.</p></article>
+    <article class="card"><div class="num">04</div><h3>Tire Changes</h3><p>Seasonal tire changes for tires already mounted on rims.</p></article>
+    <article class="card"><div class="num">05</div><h3>Brakes</h3><p>Brake checks and common brake service and replacement work.</p></article>
+    <article class="card"><div class="num">06</div><h3>Engine &amp; Transmission Service</h3><p>Valve covers, oil pans, transmission service, and related repair work.</p></article>
+  </div></section>
+  <section class="work-section" id="work"><div class="work-head"><div><h2>Recent Work</h2><div class="rule"></div></div><a href="#contact">Ask about a project →</a></div><div class="work-grid"><div class="work"><span>Tune-Up</span></div><div class="work"><span>Brake Service</span></div><div class="work"><span>Tire Change</span></div><div class="work"><span>Valve Cover</span></div><div class="work"><span>Oil Pan</span></div><div class="work"><span>Transmission Service</span></div></div></section>
+  <section class="about-wrap" id="about"><div class="about"><h2>About Jaden</h2><div class="rule"></div><p>Jaden is an automotive apprentice building a small automotive service and detailing business. The focus is practical, hands-on work, honest communication, and taking on jobs that match his current experience and capabilities.</p></div><div class="quote" id="contact"><h2>Get a Quote</h2><div class="rule"></div><p>Send a photo or description of the vehicle and what you are looking to have done.</p><div class="actions" style="justify-content:flex-start"><a class="btn primary" href="#">Call / Text</a><a class="btn" href="#">Instagram</a><a class="btn" href="#">Email</a></div><div class="note">Contact links are placeholders until Jaden's phone, Instagram, and email are added.</div></div></section>
+</main>
+<footer><span>Jaden's Auto &amp; Detailing</span><span>Auto Service • Repair • Detailing</span></footer>
+</body>
+</html>
