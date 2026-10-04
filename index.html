@@ -42,16 +42,16 @@
       "@type": "OfferCatalog",
       "name": "Mobile and Port Credit shop car and truck repair services",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Car and truck diagnostics and troubleshooting"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Oil and filter changes"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brake service"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Suspension and steering service"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Car and truck diagnostics and troubleshooting", "url": "https://jadens-auto-and-detailing.github.io/services/mobile-mechanic/"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Oil and filter changes", "url": "https://jadens-auto-and-detailing.github.io/services/oil-change/"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brake service", "url": "https://jadens-auto-and-detailing.github.io/services/brake-repair/"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Suspension and steering service", "url": "https://jadens-auto-and-detailing.github.io/services/suspension-repair/"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Engine repair and routine maintenance"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transmission and shifting issue diagnosis"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transmission and shifting issue diagnosis", "url": "https://jadens-auto-and-detailing.github.io/services/transmission-diagnostics/"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Battery, starting and electrical service"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Winter and summer tire changes on mounted rims"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobile body, paint and cosmetic work"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobile auto detailing"}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Winter and summer tire changes on mounted rims", "url": "https://jadens-auto-and-detailing.github.io/services/seasonal-tire-changes/"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Body, paint and cosmetic work"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Auto detailing"}}
       ]
     },
     "contactPoint": {
@@ -270,6 +270,8 @@
     .service-icon { width: 46px; height: 46px; object-fit: contain; }
     .service-card h3 { margin: 0 0 6px; font-size: 1rem; line-height: 1.2; text-transform: uppercase; }
     .service-card p { margin: 0; color: var(--muted); font-size: .88rem; }
+    .service-link { display: inline-block; margin-top: 9px; color: #fff; font-size: .72rem; font-weight: 900; text-underline-offset: 3px; }
+    .service-link:hover { color: var(--red); }
     .service-secondary { margin-top: 28px; }
     .service-secondary h3 { margin: 0 0 14px; color: var(--red); font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; }
     .service-secondary-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -295,8 +297,13 @@
     .step p { margin: 0; color: var(--muted); }
 
     .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .work-group + .work-group { margin-top: 48px; }
+    .work-group-heading { margin: 0 0 18px; font-size: 1.15rem; text-transform: uppercase; }
+    .work-note { max-width: 850px; margin: -4px 0 22px; color: var(--muted); }
     .work-card { margin: 0; }
+    .work-image-wrap { position: relative; }
     .work-card img {
+      display: block;
       width: 100%;
       height: auto;
       aspect-ratio: 1.68 / 1;
@@ -305,6 +312,20 @@
       border-radius: 8px;
       background: #151515;
     }
+    .work-label {
+      position: absolute;
+      top: 10px;
+      padding: 6px 9px;
+      border-radius: 4px;
+      background: rgba(5, 5, 5, .82);
+      color: #fff;
+      font-size: .65rem;
+      font-weight: 950;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+    .work-label-left { left: 10px; }
+    .work-label-right { right: 10px; background: rgba(211, 29, 40, .9); }
     .work-card figcaption {
       padding-top: 10px;
       color: #e8e8e8;
@@ -487,35 +508,35 @@
         <div class="services-grid">
           <article class="service-card">
             <div class="service-icon-shell"><img class="service-icon" src="assets/icons/service-diagnostics.svg" width="48" height="48" alt="" aria-hidden="true"></div>
-            <div><h3>Diagnostics &amp; troubleshooting</h3><p>Help with warning lights, no-starts, unusual noises, leaks, poor performance, and other vehicle concerns.</p></div>
+            <div><h3>Diagnostics &amp; troubleshooting</h3><p>Help with warning lights, no-starts, unusual noises, leaks, poor performance, and other vehicle concerns.</p><a class="service-link" href="services/mobile-mechanic/">Mobile mechanic service</a></div>
           </article>
           <article class="service-card">
             <div class="service-icon-shell"><img class="service-icon" src="assets/icons/service-brakes.svg" width="48" height="48" alt="" aria-hidden="true"></div>
-            <div><h3>Brake service &amp; repair</h3><p>Brake concerns, inspections, and common pad, rotor, caliper, and replacement work.</p></div>
+            <div><h3>Brake service &amp; repair</h3><p>Brake concerns, inspections, and common pad, rotor, caliper, and replacement work.</p><a class="service-link" href="services/brake-repair/">Brake repair details</a></div>
           </article>
           <article class="service-card">
             <div class="service-icon-shell"><img class="service-icon" src="assets/icons/service-suspension.svg" width="48" height="48" alt="" aria-hidden="true"></div>
-            <div><h3>Suspension &amp; steering</h3><p>Diagnosis and selected repair work for clunks, vibration, poor handling, uneven wear, and worn components.</p></div>
+            <div><h3>Suspension &amp; steering</h3><p>Diagnosis and selected repair work for clunks, vibration, poor handling, uneven wear, and worn components.</p><a class="service-link" href="services/suspension-repair/">Suspension repair details</a></div>
           </article>
           <article class="service-card">
             <div class="service-icon-shell"><img class="service-icon" src="assets/icons/service-engine-transmission.svg" width="48" height="48" alt="" aria-hidden="true"></div>
-            <div><h3>Engine repair &amp; maintenance</h3><p>Oil and filter changes, tune-ups, engine concerns, leaks, and selected mechanical or parts-replacement jobs.</p></div>
+            <div><h3>Engine repair &amp; maintenance</h3><p>Oil and filter changes, tune-ups, engine concerns, leaks, and selected mechanical or parts-replacement jobs.</p><a class="service-link" href="services/oil-change/">Oil change details</a></div>
           </article>
           <article class="service-card">
             <div class="service-icon-shell"><img class="service-icon" src="assets/icons/service-transmission.svg" width="48" height="48" alt="" aria-hidden="true"></div>
-            <div><h3>Transmission &amp; shifting issues</h3><p>Assessment of slipping, delayed or hard shifting, warning lights, leaks, and other transmission or driveline concerns.</p></div>
+            <div><h3>Transmission &amp; shifting issues</h3><p>Assessment of slipping, delayed or hard shifting, warning lights, leaks, and other transmission or driveline concerns.</p><a class="service-link" href="services/transmission-diagnostics/">Transmission diagnosis details</a></div>
           </article>
           <article class="service-card">
             <div class="service-icon-shell"><img class="service-icon" src="assets/icons/service-electrical.svg" width="48" height="48" alt="" aria-hidden="true"></div>
-            <div><h3>Battery, starting &amp; electrical</h3><p>Battery, charging, starting, lighting, sensor, and common electrical concerns and replacement work.</p></div>
+            <div><h3>Battery, starting &amp; electrical</h3><p>Battery, charging, starting, lighting, sensor, and common electrical concerns and replacement work.</p><a class="service-link" href="services/mobile-mechanic/">Ask about mobile diagnosis</a></div>
           </article>
           <article class="service-card">
             <div class="service-icon-shell"><img class="service-icon" src="assets/icons/service-tire-change.svg" width="48" height="48" alt="" aria-hidden="true"></div>
-            <div><h3>Winter &amp; summer tire changes</h3><p>Seasonal tire swaps at your location for winter or summer tires already mounted on rims.</p></div>
+            <div><h3>Winter &amp; summer tire changes</h3><p>Seasonal tire swaps at your location for winter or summer tires already mounted on rims.</p><a class="service-link" href="services/seasonal-tire-changes/">Seasonal tire details</a></div>
           </article>
           <article class="service-card">
             <div class="service-icon-shell"><img class="service-icon" src="assets/icons/service-tune-up.svg" width="48" height="48" alt="" aria-hidden="true"></div>
-            <div><h3>Inspections &amp; maintenance</h3><p>General vehicle checks and routine service based on the vehicle’s condition and maintenance needs. Not a certified safety inspection.</p></div>
+            <div><h3>Inspections &amp; maintenance</h3><p>General vehicle checks and routine service based on the vehicle’s condition and maintenance needs. Not a certified safety inspection.</p><a class="service-link" href="services/mobile-mechanic/">How mobile service works</a></div>
           </article>
         </div>
         <div class="service-secondary">
@@ -551,35 +572,79 @@
     <section class="section" id="work">
       <div class="shell">
         <div class="section-heading">
-          <p class="section-label">Real photos</p>
-          <h2>Examples of Jaden’s Work</h2>
-          <p class="section-intro">Real photos from Jaden’s repair and detailing work. The original low-resolution photos were enlarged and AI-restored for clarity without changing the service shown.</p>
+          <p class="section-label">Service gallery</p>
+          <h2>Real Work and Before-and-After Service Examples</h2>
+          <p class="section-intro">See real photos from Jaden’s work and clearly labelled examples of what common repair and detailing services involve.</p>
         </div>
-        <div class="work-grid">
-          <figure class="work-card">
-            <img src="assets/work/brake-rotor-caliper-repair.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Red brake caliper and brake rotor during car brake repair">
-            <figcaption>Brake rotor and caliper repair</figcaption>
-          </figure>
-          <figure class="work-card">
-            <img src="assets/work/suspension-coil-spring-repair.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Coil spring, shock, and suspension components beneath a vehicle">
-            <figcaption>Suspension and coil spring work</figcaption>
-          </figure>
-          <figure class="work-card">
-            <img src="assets/work/engine-bay-repair-work.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Car engine and wiring exposed during engine-bay repair work">
-            <figcaption>Engine-bay repair work</figcaption>
-          </figure>
-          <figure class="work-card">
-            <img src="assets/work/disassembled-engine-block-repair.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Disassembled engine block on a workbench during mechanical repair">
-            <figcaption>Engine component repair</figcaption>
-          </figure>
-          <figure class="work-card">
-            <img src="assets/work/black-leather-interior-detailing.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Clean black leather car seats after interior auto detailing">
-            <figcaption>Interior detailing</figcaption>
-          </figure>
-          <figure class="work-card">
-            <img src="assets/work/vehicle-hood-detailing-before-after.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Dirty and clean vehicle hood before and after exterior auto detailing">
-            <figcaption>Exterior detailing before and after</figcaption>
-          </figure>
+        <div class="work-group">
+          <h3 class="work-group-heading">Photos from Jaden’s work</h3>
+          <p class="work-note">These are Jaden’s original repair and detailing photos. The low-resolution source photos were enlarged and AI-restored for clarity without changing the service shown.</p>
+          <div class="work-grid">
+            <figure class="work-card">
+              <img src="assets/work/brake-rotor-caliper-repair.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Red brake caliper and brake rotor during car brake repair">
+              <figcaption>Brake rotor and caliper repair</figcaption>
+            </figure>
+            <figure class="work-card">
+              <img src="assets/work/suspension-coil-spring-repair.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Coil spring, shock, and suspension components beneath a vehicle">
+              <figcaption>Suspension and coil spring work</figcaption>
+            </figure>
+            <figure class="work-card">
+              <img src="assets/work/black-leather-interior-detailing.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Clean black leather car seats after interior auto detailing">
+              <figcaption>Interior detailing</figcaption>
+            </figure>
+            <figure class="work-card">
+              <img src="assets/work/vehicle-hood-detailing-before-after.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Dirty and clean vehicle hood before and after exterior auto detailing">
+              <figcaption>Exterior detailing before and after</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="work-group">
+          <h3 class="work-group-heading">Before-and-after service examples</h3>
+          <p class="work-note">These AI-generated illustrative photos show common services and likely visual changes. They are examples, not photos of a specific customer vehicle or a promise that every repair will look the same.</p>
+          <div class="work-grid">
+            <figure class="work-card">
+              <div class="work-image-wrap">
+                <img src="assets/work/oil-and-filter-change-process.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Illustrative comparison of old oil draining and fresh engine oil with a new filter">
+                <span class="work-label work-label-left">Old oil</span><span class="work-label work-label-right">Fresh oil</span>
+              </div>
+              <figcaption>Oil and filter change</figcaption>
+            </figure>
+            <figure class="work-card">
+              <div class="work-image-wrap">
+                <img src="assets/work/brake-repair-before-after.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Illustrative before-and-after comparison of a worn brake rotor and replacement brake rotor">
+                <span class="work-label work-label-left">Before</span><span class="work-label work-label-right">After</span>
+              </div>
+              <figcaption>Brake repair</figcaption>
+            </figure>
+            <figure class="work-card">
+              <div class="work-image-wrap">
+                <img src="assets/work/suspension-strut-repair-before-after.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Illustrative before-and-after comparison of a leaking strut and replacement suspension strut">
+                <span class="work-label work-label-left">Before</span><span class="work-label work-label-right">After</span>
+              </div>
+              <figcaption>Strut and suspension repair</figcaption>
+            </figure>
+            <figure class="work-card">
+              <div class="work-image-wrap">
+                <img src="assets/work/headlight-restoration-before-after.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Illustrative before-and-after comparison of a cloudy headlight and restored clear headlight">
+                <span class="work-label work-label-left">Before</span><span class="work-label work-label-right">After</span>
+              </div>
+              <figcaption>Headlight restoration</figcaption>
+            </figure>
+            <figure class="work-card">
+              <div class="work-image-wrap">
+                <img src="assets/work/interior-detailing-before-after.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Illustrative before-and-after comparison of a dirty and professionally detailed car interior">
+                <span class="work-label work-label-left">Before</span><span class="work-label work-label-right">After</span>
+              </div>
+              <figcaption>Interior detailing</figcaption>
+            </figure>
+            <figure class="work-card">
+              <div class="work-image-wrap">
+                <img src="assets/work/seasonal-tire-change-before-after.webp" width="1600" height="952" loading="lazy" decoding="async" alt="Illustrative comparison of an all-season wheel and a winter tire mounted on a steel rim">
+                <span class="work-label work-label-left">All-season</span><span class="work-label work-label-right">Winter</span>
+              </div>
+              <figcaption>Winter and summer tire changes</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
